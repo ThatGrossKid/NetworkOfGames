@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style-main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src = "https:ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+    left:300px;
+}
+</style>
+    </head>
+    <body onload="startGame()">
+        
+        <!--Game viewer-->
+        <script src = "random-game-1.js"></script>
+        <h2 style="color:white;position:relative;left:50px;bottom:275px;font-size: 50px;text-align: center;">Game</h2>
+        <div class = 'controller' style="position:relative;left:700px;bottom:250px;">
+            
+            <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+            <p>Use the ACCELERATE button to stay in the air</p>
+            <p>How long can you stay alive?</p>
+        </div>
+        
+        <div class = 'commentSec' style="position:relative;left:700px;bottom:200px;">
+            <p>Comment Section:</p>
+            <script>
+                // Create a new list item when clicking on the "Add" button
+                function newElement() {
+                var li = document.createElement("li");
+                var inputValue = document.getElementById("textcomment").value;
+                var t = document.createTextNode(inputValue);
+                li.appendChild(t);
+                if (inputValue === '') {
+                    alert("Text is empty");
+                } else {
+                    document.getElementById("myUL").appendChild(li);
+                }
+                document.getElementById("myInput").value = "";
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                li.appendChild(span);
+
+                for (i = 0; i < close.length; i++) {
+                    close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                    }
+                }
+                }
+            </script>
+            <textarea id="textcomment" placeholder = "Comment Section..." style="height: 100px;width:350px;"></textarea>
+            <button id="comment" onclick="newElement()">Comment</button>
+            <ul id = "myUL">
+            </ul>
+        </div>
+        <table id = "gameMenu">
+            <tr>
+                <th>
+                    <div><a href = "index-web-project.html">Home</a></div>
+                </th>
+                <th>
+                    <div><a href="index-web-project-trending.html">Trending</a></div>
+                </th>
+                <th>
+                    <div><a href="index-web-project-genre.html">Genre</a></div>
+                </th>
+                <th>
+                    <div><a href="index-web-project-new.html">New</a></div>
+                </th>
+                <th>
+                    <div><a href="index-account-page.html">Account</a></div>
+                </th>
+            </tr>
+        </table>
+        
+
+    </body>
+</html>

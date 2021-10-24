@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Game!</title>
+        <link rel="stylesheet" type="text/css" href="style-main.css">
+        <script src = "https:ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src = "nog-script-main.js"></script>
+    </head>
+    <body>
+        <div id = 'form'>
+            <h3>Show a file-select field which allows multiple files:</h3>
+            <form action="/action_page.php">
+                <label for="mygamename">Game Name</label>
+                <input type = "text" id="gamename" name="gamename"><br><br>
+                <label for="myfile">Select files:</label>
+                <input type="file" id="myfile" name="myfile" multiple><br><br>
+                <input type="submit">
+            </form>
+        </div>
+        <div id = 'Successful'>
+
+        </div>
+        <div id = 'Failed'>
+
+        </div>
+    </body>
+</html>
